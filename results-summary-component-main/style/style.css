@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+
+    
+    --font-principal: 'Hanken Grotesk', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-principal);
+}
+
+
+div#container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+div#part1{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 25px;
+
+    height: 450px;
+    width: 280px;
+    padding: 0px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+div#circulo{
+    
+    box-sizing: border-box;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    padding: 35px 50px;
+    margin: 2em;
+    border-radius: 50%;
+}
+h1#numero-do-circulo{
+    color: hsl(0, 0%, 100%);
+    font-size: 4em;
+}
+h1#da-part1{
+    color: hsl(0, 0%, 100%) ;
+    margin-bottom: 0.5em;
+}
+
+p{
+    font-weight: 700;
+    background-color: var(--cor-fundo);
+    color: hsl(241, 100%, 89%);
+}
+p#numero-do-paragrafo{
+   color:hsla(241, 100%, 89%, 0.438) ; 
+}
+p#paragafo-part1{
+    padding: 0px 25px;
+}
+p#titulo-part1{
+    font-size: 1.3em;
+}
+/* primeira parte concluida*/
+
+div#part2{
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5em 2.5em;
+    margin-left: -10px;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.13);
+    
+    border-bottom-right-radius: 10px;
+    
+   
+}
+ul{
+    list-style: none;
+    
+    
+}
+li{
+    display: flex;
+    margin: 1em 0em;
+    padding: 15px 9px;
+    justify-content: space-between;
+    border-radius: 5px;
+    
+}
+li p{
+    color: black;
+}
+li > div{
+    display: flex;
+    
+    
+}
+img{
+    padding-right: 10px;
+}
+samp{
+    color:hsla(0, 0%, 0%, 0.555) ; 
+}
+li#Reaction{
+    background-color: hsla(0, 100%, 67%, 0.13);
+    
+}
+p#nomereaction{
+    color:hsla(0, 100%, 67%) ;
+}
+li#memory{
+    background-color: hsla(39, 100%, 56%, 0.308);
+}
+p#nomememory{
+    color: hsl(39, 100%, 56%);
+}
+li#verbal{
+    background-color: hsla(166, 100%, 37%, 0.274);
+}
+p#nomeverbal{
+    color: hsl(166, 100%, 37%);
+}
+li#visual{
+    background-color: hsla(234, 85%, 45%, 0.164);
+}
+p#nomevisual{
+    color: hsl(234, 85%, 45%);
+}
+
+/* final */
+
+button#botao{
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border: none;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 2em;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width:1440px) {
+
+    div#container{
+        flex-direction: column;
+        
+    }
+    
+}

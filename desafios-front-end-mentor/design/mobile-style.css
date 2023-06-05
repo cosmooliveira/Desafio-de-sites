@@ -1,0 +1,50 @@
+@charset "UFT-8";
+@media screen and (max-width:2000px) {
+
+    div#conteudo{
+        width: 400px;
+        height: 600px;
+        padding: 20px;
+        
+    }
+    img{
+        width: 400px;
+    }
+    h1{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1em;
+    }
+    
+}
+@media screen and (max-width:500px) {
+
+    
+    div#conteudo{
+        width: 80vw;
+        height: 120vw;
+        padding: 4vw;
+        
+        
+    }
+    img{
+        width: 80vw;
+    }
+    h1{
+        font-size: 6.5vw;
+    }
+    p{
+        font-size: 3.3vw;
+        padding: 1.5em 4em;
+    }
+}
+
+@media screen and (max-width:300px) {
+    img{
+        width: 78vw;
+    }
+    h1{
+        padding-top: 15px;
+    }
+}

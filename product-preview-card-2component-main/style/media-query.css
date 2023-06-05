@@ -1,0 +1,33 @@
+@charset "UFT-8";
+
+@media screen and (max-width:675px) {
+
+    div#conteudo-completo{
+        display: flex;
+        flex-direction: column;
+    }
+    img.imagem-maior{
+        display: none;
+    }
+    img.imagem-menor{
+        display: block;
+        ;
+    }
+    div#conteudo-completo{
+        max-width: 370px;
+    }
+    img{
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    p{
+        padding-top: 20px;
+        padding-bottom: 10px;
+        
+    }
+    div#conteudo-texto{
+        padding-top: 0px;
+        padding-bottom:0px ;
+        margin: 0%;
+    }
+}
