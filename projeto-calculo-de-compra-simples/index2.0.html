@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>calculando o troco</h1>
+    <button onclick= compra()>comprar produto</button>
+    <script>
+        function compra(){
+            var nome_do_produto = prompt(`Que produto você comprando?`)
+            var valor_do_produto = prompt(`Quanto custa ${nome_do_produto} que você esta comprando?`)
+            var forma_de_pagamento = prompt(`Qual foi a forma de pagamento? dinheiro, pix ou cartão`)
+
+            if(forma_de_pagamento == 'dinheiro' || forma_de_pagamento == 'pix'){
+
+                var valor_dado = prompt(`qual foi o valor que você deu para pagar ${nome_do_produto}`)
+
+            var troco = Number(valor_dado) - Number(valor_do_produto)
+            alert(`Você comprou ${nome_do_produto} que custou R$${valor_do_produto},00.
+Deu R$${valor_dado},00 em dinheiro e vai receber R$${troco},00
+Volte Sempre!`)
+            } else{
+                var juros = prompt(`teve juros no cartão? SIM ou NÂO`)
+                if (juros == 'sim'){
+                    var Quanto_de_juros = prompt(`Quanto foi a porcentagem do juros?`)
+                    var dividiu = prompt(`você dividiu? SIM ou NÂO`)
+
+                    if(dividiu == 'sim'){
+                        var quantas_vezes =  prompt(`Quantas vezes você dividiu?`)
+                        var total = Number(valor_do_produto) * Number(Quanto_de_juros/100)
+                        var total = Number(valor_do_produto) + Number(total)
+
+                        var parcela = Number(valor_do_produto)/Number(quantas_vezes)
+
+                        alert(`Então o valor que você pagou do ${nome_do_produto} foi de R$${valor_do_produto},00 com ${Quanto_de_juros}% de juros e que dividiu ${quantas_vezes} vezes, que deu o valor de R$${total},00 e dividido em ${quantas_vezes} vezes vai da no valor da parcela de ${parcela.toFixed(1)}`)
+                    }else{
+                        var total = Number(valor_do_produto) * Number(Quanto_de_juros/100)
+                        var total = Number(valor_do_produto) + Number(total)
+
+                        alert(`Então o valor que você pagou do ${nome_do_produto} foi de R$${valor_do_produto},00 com ${Quanto_de_juros}% de juros que deu o valor de R$${total},00`)
+                    }
+
+                } else{
+                    var dividiu = prompt(`você dividiu? SIM ou NÂO`)
+                    if(dividiu == 'sim'){
+                        var quantas_vezes =  prompt(`Quantas vezes você dividiu?`)
+                        var parcela= Number(valor_do_produto)/Number(quantas_vezes)
+
+                        alert(`Então o valor que você pagou do ${nome_do_produto} foi de R$${valor_do_produto},00 sem juros e dividiu ${quantas_vezes} vezes, que deu o valor de R$${valor_do_produto},00  e dividido em ${quantas_vezes} vai da no valor da parcela de ${parcela.toFixed(1)}`)
+                    }else{
+                        
+                        alert(`Então o valor que você pagou do ${nome_do_produto} foi de R$${valor_do_produto},00 sem juros que deu o valor de R$${valor_do_produto},00`)
+                    }
+                }
+            }
+
+            
+        
+
+        }
+    </script>
+</body>
+</html>
